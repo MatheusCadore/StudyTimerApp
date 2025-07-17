@@ -15,7 +15,9 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Slider
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -33,28 +35,11 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Timer()
+
         }
     }
 }
 
-@Preview
-@Composable
-fun Timer(){
-    Surface(modifier = Modifier.fillMaxSize()) {
-        Column(modifier = Modifier.padding(6.dp)) {
-            Text(text = "00:00", textAlign = TextAlign.Center, fontSize = 60.sp, modifier = Modifier.fillMaxWidth())
-            Spacer(modifier = Modifier.height(8.dp))
-            Row(horizontalArrangement = Arrangement.SpaceEvenly, modifier = Modifier.fillMaxWidth()) {
-                Button(onClick = {} ) {
-                    Text("Start")
-                }
-                Button(onClick = {} ) {
-                    Text("Reset")
-                }
-            }
-        }
 
-    }
-}
+
 
